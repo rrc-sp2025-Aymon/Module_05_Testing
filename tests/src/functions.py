@@ -61,7 +61,7 @@ def prompt_name_greeting()->str:
 
 
 
-def math_operation(operand1: int, operand2: int, operation: str = "+")-> float:
+def math_operation(operand1: int, operand2: int, operation: str)-> float:
     """
     Returns the result of the specified operation based 
     on the two operands.
@@ -71,16 +71,14 @@ def math_operation(operand1: int, operand2: int, operation: str = "+")-> float:
         operand2 (int): The second operand.
         operation (str): The operation to perform, default = "+"
     Returns:
-        None
+        result (float):result of the specified operation based on the two operands.
     Raises:
         ValueError:  "Invalid operation." When operation is not + or -.
     """
     
     if operation == "+":
         result = operand1 + operand2
-    elif operation == "-":
-        result = operand1 - operand2
     else:
-        raise ValueError("Invalid operation.")   
+        result = operand1 - operand2  
     
     return result
